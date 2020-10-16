@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-server-caller
+  labels:
+    app: api-server-caller
+  namespace: loggers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-server-caller
+  template:
+    metadata:
+      labels:
+        app: api-server-caller
+    spec:
+      containers:
+      - name: api-server-caller
+        image: agtestingregistry.azurecr.io/api-server-caller
