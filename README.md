@@ -12,10 +12,17 @@ Run the Docker image to see if it works:
 docker run --rm -it api-server-caller
 ```
 
+Log in to Azure, Azure Container Registry:
+
+```sh
+az login
+az acr login --name agtestingregistry
+```
+
 Push the image to ACR:
 
 ```sh
-./push-image-to-acr.sh
+./push-image-to-acr.sh api-server-caller
 ```
 
 Use the image in deployment:
