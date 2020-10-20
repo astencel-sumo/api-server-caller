@@ -3,7 +3,7 @@ RUN apt-get update \
     && apt-get install \
         gcc \
         g++
-
+RUN gem install rest-client
 WORKDIR /app
-COPY ./single-file.rb ./
-CMD ruby ./single-file.rb
+COPY ./script.rb ./
+CMD ruby ./script.rb

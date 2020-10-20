@@ -1,9 +1,4 @@
-require 'bundler/inline'
-
-gemfile do
-  source 'https://rubygems.org'
-  gem 'rest-client', require: 'rest-client'
-end
+require 'rest-client'
 
 loop do
   response = RestClient.get 'http://jedr.pl/'
