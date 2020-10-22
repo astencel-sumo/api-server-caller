@@ -1,0 +1,4 @@
+.vscode
+Deployment.yaml
+push-image-to-acr.sh
+README.md
