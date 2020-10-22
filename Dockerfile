@@ -3,7 +3,7 @@ RUN apt-get update \
     && apt-get install \
         gcc \
         g++
-RUN gem install rest-client
+RUN gem install excon
 WORKDIR /app
-COPY ./script.rb ./
-CMD ruby ./script.rb
+COPY ./excon-script.rb ./
+CMD ruby ./excon-script.rb
